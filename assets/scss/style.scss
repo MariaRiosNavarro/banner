@@ -93,6 +93,11 @@
   }
 }
 
+.ani-wrapper {
+  max-width: 70%;
+  @include center-column;
+}
+
 // ?animations
 
 @keyframes move {

@@ -1,5 +1,6 @@
 import "./assets/scss/style.scss";
 import { setupCounter } from "./counter.js";
+import anime from "animejs/lib/anime.es.js";
 
 document.querySelector("#app").innerHTML = `
 <div class="parallax">
@@ -56,5 +57,82 @@ document.querySelector("#app").innerHTML = `
   </div>
 </div>
 `;
+
+document.querySelector("#app2").innerHTML = `
+<div class="ani-wrapper">
+  <div class="box1">anime.js</div>
+  <div class="box3">anime.js</div>
+  <div class="box4">anime.js</div>
+  <div class="box5">anime.js</div>
+  <div class="box6">anime.js</div>
+  <div class="box7">anime.js</div>
+  <div class="box8">anime.js</div>
+</div>
+
+`;
+
+const box1 = document.querySelector(".box1");
+const animation = anime({
+  targets: box1,
+  translateX: 300,
+  duration: 2000,
+  direction: "alternate",
+  loop: true,
+});
+
+const box3 = document.querySelector(".box3");
+const animation3 = anime({
+  targets: box3,
+  translateX: "100vw",
+  duration: 3000,
+  easing: "easeInOutQuad",
+  loop: true,
+  // autoplay: false  //to use one time
+});
+
+const box4 = document.querySelector(".box4");
+const animation4 = anime({
+  targets: box4,
+  translateX: 500,
+  duration: 4000,
+  direction: "ease",
+  loop: true,
+});
+
+const box5 = document.querySelector(".box5");
+const animation5 = anime({
+  targets: box5,
+  scale: 5,
+  easing: "linear",
+  duration: 4000,
+  loop: true,
+  direction: "alternate",
+});
+
+const box6 = document.querySelector(".box6");
+const animation6 = anime({
+  targets: box6,
+  translateX: 300,
+  duration: 2000,
+  direction: "alternate",
+  loop: true,
+});
+
+const box7 = document.querySelector(".box7");
+const animation7 = anime({
+  targets: box7,
+  translateX: 300,
+  duration: 2000,
+  direction: "alternate",
+  loop: true,
+});
+const box8 = document.querySelector(".box8");
+const animation8 = anime({
+  targets: box8,
+  translateX: 300,
+  duration: 2000,
+  direction: "alternate",
+  loop: true,
+});
 
 setupCounter(document.querySelector("#counter"));
