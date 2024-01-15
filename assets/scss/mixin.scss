@@ -1,0 +1,49 @@
+@mixin dark {
+  background-color: rgb(29, 27, 27);
+  color: #efeaea;
+}
+
+@mixin light {
+  background-color: #efeaea;
+  color: rgb(29, 27, 27);
+}
+
+@mixin color-full {
+  background-color: orange;
+  color: rgb(23, 20, 168);
+  &:hover {
+    background-color: $dark-red;
+  }
+}
+
+@mixin f-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin f-row {
+  display: flex;
+  align-items: center;
+}
+
+@mixin center-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin center-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin weight {
+  font-weight: 300;
+}
+
+// @mixin text($fz, $fw) {
+//     font-size: $fz;
+//     font-weight: $fw;
+// }
