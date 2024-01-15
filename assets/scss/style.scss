@@ -69,10 +69,14 @@
     }
     &:nth-of-type(4) {
       h3 {
+        font-weight: 100;
         opacity: 0.4;
         background-color: violet;
+        transition: all 0.7s ease-in-out;
         &:hover {
-          background-color: blue;
+          background-color: rgb(167, 167, 239);
+          @include weight;
+          opacity: 1;
         }
       }
     }
